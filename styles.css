@@ -1,0 +1,395 @@
+/* RESET GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa; /* Fondo gris claro */
+    color: #343a40; /* Texto gris oscuro */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style-type: none;
+}
+
+/* HEADER */
+header {
+    background-color: #ffffff; /* Fondo blanco */
+    padding: 20px 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra más marcada */
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-img {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+}
+
+.logo {
+    font-size: 1.8rem;
+    color: #343a40; /* Texto gris oscuro */
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #495057; /* Enlaces en gris oscuro */
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff6f20; /* Resaltado en un naranja vibrante */
+}
+
+/* HERO SECTION */
+.hero {
+    background-image: url('https://images.unsplash.com/photo-1555996121-4ab3a7514c2a');
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo negro más opaco */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.btn {
+    background-color: #ff6f20; /* Naranja vibrante */
+    color: #fff;
+    padding: 12px 30px;
+    font-size: 1rem;
+    border-radius: 30px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #e56315; /* Naranja más oscuro */
+}
+
+/* ABOUT SECTION */
+.about {
+    background-color: #f9f9f9; /* Fondo gris muy claro */
+    padding: 60px 0;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 2.5rem;
+    color: #343a40; /* Texto en gris oscuro */
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 1.2rem;
+    color: #6c757d; /* Texto gris claro */
+    width: 70%;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* MENU AND DRINKS SECTION */
+.menu, .drinks {
+    background-color: #ffffff; /* Fondo blanco */
+    padding: 60px 0;
+    text-align: center;
+}
+
+.menu h2, .drinks h2 {
+    font-size: 2.5rem;
+    color: #343a40; /* Títulos en gris oscuro */
+    margin-bottom: 40px;
+}
+
+.menu-items, .drinks-items {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.menu-items div, .drinks-items div {
+    background-color: #f8f9fa; /* Fondo gris claro para las tarjetas */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra más marcada */
+    width: 300px; /* Mantiene el tamaño de la tarjeta */
+    margin: 20px; /* Espacio entre tarjetas */
+    padding: 20px;
+    border-radius: 10px;
+    overflow: hidden; /* Evita que el contenido sobresalga */
+    display: flex;
+    flex-direction: column; /* Apilar elementos verticalmente */
+    align-items: center; /* Centrar contenido horizontalmente */
+}
+
+.menu-items div img, .drinks-items div img {
+    max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 10px; /* Opcional: bordes redondeados */
+    object-fit: cover; /* Cubre el área del contenedor sin distorsionar */
+    display: block; /* Evita espacios indeseados en imágenes inline */
+    margin-bottom: 15px; /* Espacio debajo de la imagen */
+}
+
+.menu-items div h3, .drinks-items div h3 {
+    font-size: 1.5rem;
+    color: #ff6f20; /* Naranja vibrante */
+    margin-bottom: 10px;
+}
+
+.menu-items div p, .drinks-items div p {
+    font-size: 1rem;
+    color: #6c757d; /* Texto gris claro */
+}
+
+.menu-items div span, .drinks-items div span {
+    font-size: 1.2rem;
+    color: #343a40; /* Precio en gris oscuro */
+    font-weight: bold;
+}
+
+/* CONTACT SECTION */
+.contact {
+    background-color: #f9f9f9; /* Fondo gris muy claro */
+    padding: 60px 0;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    color: #343a40; /* Título en gris oscuro */
+    margin-bottom: 20px;
+}
+
+.contact p {
+    font-size: 1.2rem;
+    color: #6c757d; /* Texto gris claro */
+    margin-bottom: 30px;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact label {
+    font-size: 1rem;
+    color: #343a40; /* Texto en gris oscuro */
+    margin-bottom: 10px;
+}
+
+.contact input, .contact textarea {
+    width: 400px;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.contact button {
+    background-color: #ff6f20; /* Naranja vibrante */
+    color: #fff;
+    padding: 12px 30px;
+    font-size: 1rem;
+    border-radius: 30px;
+    transition: background-color 0.3s;
+}
+
+.contact button:hover {
+    background-color: #e56315; /* Naranja más oscuro */
+}
+
+/* CONTACT INFO */
+.contact-info {
+    margin-top: 40px;
+}
+
+.contact-info h3 {
+    font-size: 1.8rem;
+    color: #343a40; /* Títulos en gris oscuro */
+    margin-bottom: 15px;
+}
+
+.contact-info p {
+    font-size: 1rem;
+    color: #6c757d; /* Texto gris claro */
+}
+
+/* SOCIAL MEDIA */
+.social-media {
+    margin-top: 20px;
+}
+
+.social-media h3 {
+    font-size: 1.8rem;
+    color: #343a40; /* Títulos en gris oscuro */
+    margin-bottom: 15px;
+}
+
+.social-media a {
+    margin: 0 10px;
+    color: #343a40; /* Color de los íconos */
+    font-size: 1.5rem; /* Tamaño de los íconos */
+    transition: color 0.3s;
+}
+
+.social-media a:hover {
+    color: #ff6f20; /* Resaltado en naranja vibrante */
+}
+
+/* FOOTER */
+footer {
+    background-color: #343a40; /* Fondo gris oscuro */
+    color: #fff;
+    padding: 40px 0;
+}
+
+.footer-container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.footer-section p {
+    font-size: 1.2rem;
+    color: #ff6f20; /* Texto en naranja vibrante */
+    margin-bottom: 15px;
+}
+
+.footer-section a {
+    display: block;
+    color: #ccc; /* Texto en gris claro */
+    margin-bottom: 10px;
+    transition: color 0.3s;
+}
+
+.footer-section a:hover {
+    color: #ff6f20; /* Resaltado en naranja vibrante */
+}
+
+.footer-subscribe {
+    flex: 1;
+}
+
+.footer-subscribe p {
+    margin-bottom: 15px;
+    color: #ccc;
+}
+
+.footer-subscribe input {
+    width: 250px;
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.footer-subscribe button {
+    background-color: #ff6f20; /* Naranja vibrante */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.footer-subscribe button:hover {
+    background-color: #e56315; /* Naranja más oscuro */
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .menu-items, .drinks-items {
+        flex-direction: column;
+    }
+
+    .menu-items div, .drinks-items div, .contact input, .contact textarea {
+        width: 100%;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        margin: 20px 0;
+    }
+}
